@@ -1,0 +1,9 @@
+@char Leo.1 pos:50,-50
+Leo.3: Hi, sir! Nice to meet u!
+Leo.3: What brings u here?
+Leo.4: Are u looking for someone?
+@wait 2
+Leo.2: Hahahahah!
+Leo.1: See u!
+@hide Leo
+@stop

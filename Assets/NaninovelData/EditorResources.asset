@@ -144,3 +144,50 @@ MonoBehaviour:
     - name: ScriptNavigatorUI
       pathPrefix: UI
       guid: 735d6aa767879aa469134858c5b2f0a7
+  - Id: Scripts
+    Resources:
+    - name: TestScript
+      pathPrefix: Scripts
+      guid: 9f6e28dcb82a3d448b34721ef6ba1d7c
+  - Id: Characters/a7d48c5d-f688-4b6f-b934-e978af3be6e6
+    Resources:
+    - name: 1
+      pathPrefix: Characters/Leo
+      guid: d2677221e8c71b549b8558c24afcf406
+    - name: 2
+      pathPrefix: Characters/Leo
+      guid: 09bac06a5fba1e147963ddf8970733ce
+    - name: 3
+      pathPrefix: Characters/Leo
+      guid: 61ea22c496da51c4597af09a7f8c65b4
+    - name: 4
+      pathPrefix: Characters/Leo
+      guid: a918a197cb7b4424eacdd23d329a1152
+  - Id: Characters/b0b8a645-6240-4362-a56f-e134534afa7d
+    Resources:
+    - name: 1
+      pathPrefix: Characters/Anna
+      guid: bae771acc4e67ee48b3efce608005772
+    - name: 2
+      pathPrefix: Characters/Anna
+      guid: e6aa0665ce604144db5e46f597cefae8
+    - name: 3
+      pathPrefix: Characters/Anna
+      guid: 9149eb78eea674649ab0beb8505899b8
+    - name: 4
+      pathPrefix: Characters/Anna
+      guid: b844ca02118ea704a83f7e8c48f41017
+  - Id: Characters/6e6b3f16-2bd6-49d1-9355-783557c1c09c
+    Resources:
+    - name: 1
+      pathPrefix: Characters/Colt
+      guid: 940c9ae511b1f2d4bb7da27f7bd4176f
+    - name: 2
+      pathPrefix: Characters/Colt
+      guid: ff1f70bc6f2c7eb4f918cd0c32eacf5b
+    - name: 3
+      pathPrefix: Characters/Colt
+      guid: a56a5afd2e5b88b4786b678b78c1f438
+    - name: 4
+      pathPrefix: Characters/Colt
+      guid: 458c5e9fa9540ee43a008bfaa2fbbf68
