@@ -95,40 +95,40 @@ MonoBehaviour:
       guid: 702c32b2de0c0784b9a66ec90601874f
     - name: BacklogUI
       pathPrefix: UI
-      guid: 7fba909c66b25324cb77db18679c2c96
+      guid: e512cfe878fa62b49a24588c3d8e9618
     - name: CGGalleryUI
       pathPrefix: UI
-      guid: 71da50c8dae82bd42ba67528804e820c
+      guid: c659af66c8625074f8c8b6f04a7d728a
     - name: ConfirmationUI
       pathPrefix: UI
-      guid: 88d03f19bcbff914ba33a7c9895e2d7c
+      guid: deec7b831e9a4f24fb4e66cca3f366a5
     - name: ContinueInputUI
       pathPrefix: UI
-      guid: 1add671f8348e8443bcc56290e82fc5e
+      guid: 61357b3a0d4bd4c4a93e9eca97b9ea0e
     - name: ExternalScriptsUI
       pathPrefix: UI
-      guid: 671ceb4f549ddf046913d7debf113469
+      guid: b2d435560426a2c4a94757a7fe9dabe3
     - name: LoadingUI
       pathPrefix: UI
-      guid: 53aad00e5cf184e458adb001c550518a
+      guid: 3b4c840c9a88a3c468409bb06adf01f9
     - name: MovieUI
       pathPrefix: UI
-      guid: f9a211517d1cb1a44964dc2254463049
+      guid: f39cc50d56313074b985fcf551388610
     - name: RollbackUI
       pathPrefix: UI
-      guid: a32c73a3aff4b274c85b3ff16c854b07
+      guid: b903527cef67db1498b15f11e09843c9
     - name: SaveLoadUI
       pathPrefix: UI
-      guid: 8d53726b3d08433479398f02b4780e7f
+      guid: 6b1e9798e66c7bd40b2195c1081a3a52
     - name: SceneTransitionUI
       pathPrefix: UI
-      guid: e3b234b4273b7f64ab3f1d9fe425ed23
+      guid: c078b170fe735c24b8522a8c39fd8852
     - name: SettingsUI
       pathPrefix: UI
-      guid: 65c37f59e9b266f468dd5381fdc03fc3
+      guid: 7959f4c5f4be1634896a257c8059be8d
     - name: TipsUI
       pathPrefix: UI
-      guid: f5aae572225ee1b4c96d1a17fc5cb073
+      guid: 62fa6796d3e8eea4bb326734a3ca6ee8
     - name: TitleUI
       pathPrefix: UI
       guid: ef37ed9acd128624d92342df74b4bb63
@@ -137,13 +137,13 @@ MonoBehaviour:
       guid: bb95f484e341dcd4391a572f22b7d067
     - name: PauseUI
       pathPrefix: UI
-      guid: 480f5db62ea305c46b89a86496d2a0c9
+      guid: fd20d55277bded84fbc8221be3979da2
     - name: ToastUI
       pathPrefix: UI
-      guid: dd85ce99288c2f8488447fa511b1c0d6
+      guid: 9d2ec3514612cf445bff4fed40da6c2a
     - name: ScriptNavigatorUI
       pathPrefix: UI
-      guid: 735d6aa767879aa469134858c5b2f0a7
+      guid: 21145a321c0437f4ea140e7f773ca2ac
   - Id: Scripts
     Resources:
     - name: TestScript
