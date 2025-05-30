@@ -1,9 +1,26 @@
-@char Leo.1 pos:50,-50
-Leo.3: Hi, sir! Nice to meet u!
-Leo.3: What brings u here?
-Leo.4: Are u looking for someone?
-@wait 2
-Leo.2: Hahahahah!
-Leo.1: See u!
-@hide Leo
-@stop
+; Ввод имени игрока
+@input playerName summary:"Как тебя зовут, хакер?"
+@wait i
+; Сохраняем имя в переменную
+; @set playerName=name
+
+; @bg city_night transition=fade
+; @music city_atmo fadeIn=2
+
+@char Spectra 
+Spectra: "Ты пришёл. {playerName}, верно?"
+Spectra: "У нас мало времени. В Сети засекли движение Протокола Омега."
+
+Spectra: "Ты ведь слышал о нём? Нет? Неважно."
+
+@char Spectra
+
+Spectra:
+"Нам нужен человек, который сможет разобраться с этим. Не сломаться. Не продаться."
+
+Spectra:
+"Контакт на заброшенном техноскладе — доктор Хольц. Найди его. Он знает больше."
+
+; @logQuest "Протокол Омега" "Найти доктора Энио Хольца в секторе Sigma-2."
+
+; @gotoScene Map
