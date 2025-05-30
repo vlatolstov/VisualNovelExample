@@ -134,7 +134,7 @@ MonoBehaviour:
       guid: ef37ed9acd128624d92342df74b4bb63
     - name: VariableInputUI
       pathPrefix: UI
-      guid: bb95f484e341dcd4391a572f22b7d067
+      guid: 890e9cea79bdfca42813b8cc67877882
     - name: PauseUI
       pathPrefix: UI
       guid: fd20d55277bded84fbc8221be3979da2
