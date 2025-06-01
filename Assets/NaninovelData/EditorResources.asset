@@ -17,7 +17,7 @@ MonoBehaviour:
     Resources:
     - name: Dialogue
       pathPrefix: TextPrinters
-      guid: 1bc08ccd31adff6439e97161aa6e1d8b
+      guid: 3aa240d6ef4bb3f4ebe4dc2de26528f9
   - Id: TextPrinters/eb68bf5e-8925-4713-8d84-34625bf39657
     Resources:
     - name: Fullscreen
@@ -144,50 +144,75 @@ MonoBehaviour:
     - name: ScriptNavigatorUI
       pathPrefix: UI
       guid: 21145a321c0437f4ea140e7f773ca2ac
+    - name: MapUI
+      pathPrefix: UI
+      guid: 160ecf8a7ebf8844e994480a5aecde1f
   - Id: Scripts
     Resources:
-    - name: TestScript
+    - name: Start
       pathPrefix: Scripts
       guid: 9f6e28dcb82a3d448b34721ef6ba1d7c
-  - Id: Characters/a7d48c5d-f688-4b6f-b934-e978af3be6e6
+    - name: Lab_Chening
+      pathPrefix: Scripts
+      guid: 0c6822f0a4dc44a40bff6ee36ab55407
+    - name: Lab_Empty
+      pathPrefix: Scripts
+      guid: 579752cb334c9d748b10595d292061a9
+    - name: Warehouse
+      pathPrefix: Scripts
+      guid: f7fb2720bee122f4ea52e9de873c310f
+    - name: Final
+      pathPrefix: Scripts
+      guid: 021155e36fd88dc44844718c8890e882
+    - name: Tittle
+      pathPrefix: Scripts
+      guid: b5381ae72c10b7140a3465bc48d256e2
+  - Id: Characters/0ce04524-231d-41d5-af6f-53bb78350c21
     Resources:
     - name: 1
-      pathPrefix: Characters/Leo
-      guid: d2677221e8c71b549b8558c24afcf406
+      pathPrefix: Characters/Spectra
+      guid: 9956ab43a5391224a9127047a9144ce5
     - name: 2
-      pathPrefix: Characters/Leo
-      guid: 09bac06a5fba1e147963ddf8970733ce
+      pathPrefix: Characters/Spectra
+      guid: 8ea5ceeb9308c05419c1edc890ca299a
     - name: 3
-      pathPrefix: Characters/Leo
-      guid: 61ea22c496da51c4597af09a7f8c65b4
+      pathPrefix: Characters/Spectra
+      guid: 36c2ca96d7f18ad4cb49d6d9abfed822
     - name: 4
-      pathPrefix: Characters/Leo
-      guid: a918a197cb7b4424eacdd23d329a1152
-  - Id: Characters/b0b8a645-6240-4362-a56f-e134534afa7d
+      pathPrefix: Characters/Spectra
+      guid: 8ec1c295d019cdf4eb17d88532e7f680
+    - name: 5
+      pathPrefix: Characters/Spectra
+      guid: bf56e918026b16b4bb0e50e21a4c879b
+    - name: 6
+      pathPrefix: Characters/Spectra
+      guid: 087cc19acde3a734bb4315430e1c561f
+  - Id: CharacterAvatars
+    Resources: []
+  - Id: Backgrounds/de02d14b-f9d7-45fe-b9d7-91afa232d8d9
     Resources:
-    - name: 1
-      pathPrefix: Characters/Anna
-      guid: bae771acc4e67ee48b3efce608005772
-    - name: 2
-      pathPrefix: Characters/Anna
-      guid: e6aa0665ce604144db5e46f597cefae8
-    - name: 3
-      pathPrefix: Characters/Anna
-      guid: 9149eb78eea674649ab0beb8505899b8
-    - name: 4
-      pathPrefix: Characters/Anna
-      guid: b844ca02118ea704a83f7e8c48f41017
-  - Id: Characters/6e6b3f16-2bd6-49d1-9355-783557c1c09c
+    - name: Corp
+      pathPrefix: Backgrounds/MainBackground
+      guid: 4649c7b3eca40c346a91d206a93d6e3a
+  - Id: Characters/6f6fa583-4a0b-442b-b1ad-e08fc3aba22b
     Resources:
-    - name: 1
-      pathPrefix: Characters/Colt
-      guid: 940c9ae511b1f2d4bb7da27f7bd4176f
-    - name: 2
-      pathPrefix: Characters/Colt
-      guid: ff1f70bc6f2c7eb4f918cd0c32eacf5b
-    - name: 3
-      pathPrefix: Characters/Colt
-      guid: a56a5afd2e5b88b4786b678b78c1f438
-    - name: 4
-      pathPrefix: Characters/Colt
-      guid: 458c5e9fa9540ee43a008bfaa2fbbf68
+    - name: Spectra_start_pos
+      pathPrefix: Characters/Spectra
+      guid: 9956ab43a5391224a9127047a9144ce5
+    - name: Spectra_cl_m
+      pathPrefix: Characters/Spectra
+      guid: 8ea5ceeb9308c05419c1edc890ca299a
+    - name: Spectra_op_m
+      pathPrefix: Characters/Spectra
+      guid: 36c2ca96d7f18ad4cb49d6d9abfed822
+    - name: Spectra_hair_fix
+      pathPrefix: Characters/Spectra
+      guid: 8ec1c295d019cdf4eb17d88532e7f680
+    - name: Spectra_angry
+      pathPrefix: Characters/Spectra
+      guid: bf56e918026b16b4bb0e50e21a4c879b
+    - name: Spectra_angry_point
+      pathPrefix: Characters/Spectra
+      guid: 087cc19acde3a734bb4315430e1c561f
+  - Id: Characters/27d93b83-b40f-486e-9955-a25fb69f8cb2
+    Resources: []

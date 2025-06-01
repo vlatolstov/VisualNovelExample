@@ -24,13 +24,13 @@ MonoBehaviour:
   StableIdentification: 0
   InitializationScript: 
   TitleScript: 
-  StartGameScript: 
+  StartGameScript: Start
   AutoAddScripts: 1
   HotReloadScripts: 1
   WatchScripts: 1
   WatchedDirectory: 
   CountTotalCommands: 0
-  ShowScriptNavigator: 0
+  ShowScriptNavigator: 1
   EnableVisualEditor: 1
   HideUnusedParameters: 1
   SelectPlayedScript: 1
