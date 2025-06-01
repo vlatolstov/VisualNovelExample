@@ -147,6 +147,12 @@ MonoBehaviour:
     - name: MapUI
       pathPrefix: UI
       guid: 160ecf8a7ebf8844e994480a5aecde1f
+    - name: MapButtonUI
+      pathPrefix: UI
+      guid: 9b2ddd5e35dc84d4a95ce81637f22096
+    - name: QuestLogUI
+      pathPrefix: UI
+      guid: 0b435f175ec564b44b516d764dc92c7b
   - Id: Scripts
     Resources:
     - name: Start
@@ -164,9 +170,15 @@ MonoBehaviour:
     - name: Final
       pathPrefix: Scripts
       guid: 021155e36fd88dc44844718c8890e882
-    - name: Tittle
+    - name: Title
       pathPrefix: Scripts
       guid: b5381ae72c10b7140a3465bc48d256e2
+    - name: Open_Map
+      pathPrefix: Scripts
+      guid: 9c4e11c0459aed44391a986f9429ab07
+    - name: Close_Map
+      pathPrefix: Scripts
+      guid: 01c11ff0c08002448a515c620e21c67e
   - Id: Characters/0ce04524-231d-41d5-af6f-53bb78350c21
     Resources:
     - name: 1
@@ -196,23 +208,23 @@ MonoBehaviour:
       guid: 4649c7b3eca40c346a91d206a93d6e3a
   - Id: Characters/6f6fa583-4a0b-442b-b1ad-e08fc3aba22b
     Resources:
-    - name: Spectra_start_pos
+    - name: Base
       pathPrefix: Characters/Spectra
-      guid: 9956ab43a5391224a9127047a9144ce5
-    - name: Spectra_cl_m
+      guid: 83ed728fe24e6f64680283a21a70125f
+    - name: CloseM
       pathPrefix: Characters/Spectra
-      guid: 8ea5ceeb9308c05419c1edc890ca299a
-    - name: Spectra_op_m
+      guid: 8fbb4db5805f008458f8df98cfca374f
+    - name: OpenM
       pathPrefix: Characters/Spectra
-      guid: 36c2ca96d7f18ad4cb49d6d9abfed822
-    - name: Spectra_hair_fix
+      guid: faae5016bbd0e45458ffbc1cc049560b
+    - name: Hair
       pathPrefix: Characters/Spectra
-      guid: 8ec1c295d019cdf4eb17d88532e7f680
-    - name: Spectra_angry
+      guid: 9944359b89655a34e87e81332828d85e
+    - name: Angry1
       pathPrefix: Characters/Spectra
-      guid: bf56e918026b16b4bb0e50e21a4c879b
-    - name: Spectra_angry_point
+      guid: 8d41849e21eddf8449d8c8a05e480bfc
+    - name: Angry2
       pathPrefix: Characters/Spectra
-      guid: 087cc19acde3a734bb4315430e1c561f
+      guid: 5de62769156b122418776d1b7bfe8c08
   - Id: Characters/27d93b83-b40f-486e-9955-a25fb69f8cb2
     Resources: []
