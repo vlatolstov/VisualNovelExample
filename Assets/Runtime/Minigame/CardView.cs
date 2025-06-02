@@ -4,20 +4,20 @@ using System;
 
 public class CardView : MonoBehaviour {
     [Header("UI Elements")]
-    [SerializeField] private Image frontImage;
-    [SerializeField] private Image backImage;
-    [SerializeField] private Button cardButton;
+    [SerializeField] private Image _frontImage;
+    [SerializeField] private Image _backImage;
+    [SerializeField] private Button _cardButton;
+    [SerializeField] private Animator _animator;
 
     [Header("Card Data")]
     public int CardId { get; private set; }
-
     public bool IsFlipped { get; private set; }
     public bool IsMatched { get; private set; }
 
     public event Action<CardView> OnCardClicked;
 
     private void Awake() {
-        cardButton.onClick.AddListener(HandleClick);
+        _cardButton.onClick.AddListener(HandleClick);
     }
 
     private void HandleClick() {
@@ -28,37 +28,40 @@ public class CardView : MonoBehaviour {
 
     public void SetCard(int id, Sprite frontSprite, Sprite backSprite) {
         CardId = id;
-        frontImage.sprite = frontSprite;
-        backImage.sprite = backSprite;
+        _frontImage.sprite = frontSprite;
+        _backImage.sprite = backSprite;
     }
 
     public void FlipOpen() {
         IsFlipped = true;
-        frontImage.gameObject.SetActive(true);
-        backImage.gameObject.SetActive(false);
+        _frontImage.gameObject.SetActive(true);
+        _backImage.gameObject.SetActive(false);
     }
 
     public void FlipClose() {
         IsFlipped = false;
         if (!IsMatched) {
-            frontImage.gameObject.SetActive(false);
-            backImage.gameObject.SetActive(true);
+            _frontImage.gameObject.SetActive(false);
+            _backImage.gameObject.SetActive(true);
         }
     }
 
     public void LockMatched() {
         IsMatched = true;
         IsFlipped = true;
-        frontImage.gameObject.SetActive(true);
-        backImage.gameObject.SetActive(false);
-        cardButton.interactable = false;
+        _frontImage.gameObject.SetActive(true);
+        _backImage.gameObject.SetActive(false);
+        _cardButton.interactable = false;
     }
 
     public void ResetCard() {
         IsMatched = false;
         IsFlipped = false;
-        frontImage.gameObject.SetActive(false);
-        backImage.gameObject.SetActive(true);
-        cardButton.interactable = true;
+        _frontImage.gameObject.SetActive(false);
+        _backImage.gameObject.SetActive(true);
+        _cardButton.interactable = true;
+    }
+    public void PlayAppearAnimation() {
+        _animator?.SetTrigger("Appear");
     }
 }

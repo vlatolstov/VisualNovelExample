@@ -21,6 +21,7 @@ Spectra.Angry1: Не забудь потренироваться во взлом
 @set result="(Получилось! "
 @else
 @set result="(Не вышло..."
+@endIf
 @set result+="Пора отправляться...)"
 @print {result} author:{G_playerName}
 @showUI MapButtonUI

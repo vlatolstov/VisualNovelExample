@@ -5,6 +5,7 @@ using System.Linq;
 using Naninovel;
 
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MiniGameController : MonoBehaviour {
     [Header("Card Settings")]
@@ -13,11 +14,13 @@ public class MiniGameController : MonoBehaviour {
     [SerializeField] private Sprite[] _frontSprites;
     [SerializeField] private Sprite _backSprite;
     [SerializeField] private float _flipBackDelay = 1.2f;
+    
 
-    [Header("Game Settings")]
+    [Header("Timer Settings")]
     [SerializeField] private float _timeLimit = 30f;
+    [SerializeField] private Slider _timerBar;
 
-    private List<CardView> _allCards = new();
+    private readonly List<CardView> _allCards = new();
     private CardView _firstSelected;
     private CardView _secondSelected;
 
@@ -57,7 +60,9 @@ public class MiniGameController : MonoBehaviour {
             cardData.Add((i, _frontSprites[i]));
         }
 
-        cardData = cardData.OrderBy(x => UnityEngine.Random.value).ToList();
+        cardData = cardData
+            .OrderBy(x => UnityEngine.Random.value)
+            .ToList();
 
         foreach (var (id, frontSprite) in cardData) {
             var obj = Instantiate(_cardPrefab, _cardContainer);
@@ -65,13 +70,12 @@ public class MiniGameController : MonoBehaviour {
             card.SetCard(id, frontSprite, _backSprite);
             card.OnCardClicked += OnCardClicked;
             card.ResetCard();
+            card.PlayAppearAnimation();
             _allCards.Add(card);
         }
     }
 
     private void OnCardClicked(CardView card) {
-        Debug.Log($"Card {card.CardId} clicked.");
-
         if (!_isGameRunning || _isComparing || card.IsFlipped || card.IsMatched)
             return;
 
@@ -116,12 +120,22 @@ public class MiniGameController : MonoBehaviour {
 
     private async UniTaskVoid TickTimer() {
         while (_timeRemaining > 0f && _isGameRunning) {
-            await UniTask.Delay(1000);
-            _timeRemaining -= 1f;
+            UpdateTimerUI();
+            await UniTask.Delay(100);
+            _timeRemaining -= 0.1f;
         }
 
-        if (_isGameRunning)
+        if (_isGameRunning) {
+            UpdateTimerUI();
             EndGame(false);
+        }
+    }
+
+    private void UpdateTimerUI() {
+        float progress = Mathf.Clamp01(_timeRemaining / _timeLimit);
+
+        if (_timerBar != null)
+            _timerBar.value = progress;
     }
 
     private void EndGame(bool won) {
