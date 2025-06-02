@@ -1,0 +1,32 @@
+@input G_playerName summary:"Как тебя зовут, хакер?"
+@wait i
+
+; @bgm
+
+@back Corp
+@char Spectra.Base pos:40,0 scale:0.8
+@wait i
+Spectra.Base: Ты пришёл. {G_playerName}, верно?
+Spectra.CloseM: У нас мало времени. В Сети засекли движение Протокола Омега. Понимаешь, что это значит? Это наш шанс закончить эту бойню.
+Spectra.OpenM: Купер сказал, что вы исключительный агент. Хотя и со своим стилем.
+Spectra.Hair: Полагаю это твой шанс реабилитироваться, {G_playerName}, после провала прошлого задания. 
+Spectra.CloseM: Наш контакт в лаборатории контроля вооружений - доктор Ченинг. Мы давно за ним наблюдаем. Найди его. Получи от него информацию.
+@set questLog="Встретиться с Ченингом в лаборатории"
+@showUI QuestLogUI
+@mapButtonEnable id:Lab enabled:true
+Spectra.Base: Он может попытаться заручиться твоей поддержкой, но знай. Ему нельзя доверять. Главное - установи местонахождение хард-драйва и доставь его мне. 
+
+@hide Spectra
+
+#Map
+@print "(Пора отправляться...)" author:{G_playerName}
+@showUI MapButtonUI
+@stop
+
+@playMiniGame
+@if G_gameWon
+@set result="(Получилось! "
+@else
+@set result="(Не вышло..."
+@endIf
+@set result+="Пора отправляться...)"

@@ -1,0 +1,7 @@
+@hideUI MapUI
+@if !hardDriveFound
+    @goto Lab.Chening
+    @else
+    @goto Lab.Empty
+    @endIf
+@stop

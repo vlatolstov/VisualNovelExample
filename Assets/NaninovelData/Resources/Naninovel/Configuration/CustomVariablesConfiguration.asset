@@ -15,3 +15,11 @@ MonoBehaviour:
   PredefinedVariables:
   - name: G_playerName
     value: "\"\u041D\u0435\u0442\u0440\u0430\u043D\u0435\u0440\""
+  - name: corpAccess
+    value: false
+  - name: labAccess
+    value: false
+  - name: whAccess
+    value: false
+  - name: hardDriveFound
+    value: false

@@ -155,21 +155,15 @@ MonoBehaviour:
       guid: 0b435f175ec564b44b516d764dc92c7b
   - Id: Scripts
     Resources:
-    - name: Start
+    - name: Corp
       pathPrefix: Scripts
       guid: 9f6e28dcb82a3d448b34721ef6ba1d7c
-    - name: Lab_Chening
+    - name: Lab
       pathPrefix: Scripts
       guid: 0c6822f0a4dc44a40bff6ee36ab55407
-    - name: Lab_Empty
-      pathPrefix: Scripts
-      guid: 579752cb334c9d748b10595d292061a9
     - name: Warehouse
       pathPrefix: Scripts
       guid: f7fb2720bee122f4ea52e9de873c310f
-    - name: Final
-      pathPrefix: Scripts
-      guid: 021155e36fd88dc44844718c8890e882
     - name: Title
       pathPrefix: Scripts
       guid: b5381ae72c10b7140a3465bc48d256e2
@@ -182,6 +176,15 @@ MonoBehaviour:
     - name: MiniGameTest
       pathPrefix: Scripts
       guid: c1ebf11ed624eb04290591f16eae02fc
+    - name: LabMapMark
+      pathPrefix: Scripts
+      guid: 8ed0f853a74fced4d9f3bda0f3e8a5a5
+    - name: CorpMapMark
+      pathPrefix: Scripts
+      guid: 75fb3086139a03d4e877ad486856aa42
+    - name: WarehouseMapMark
+      pathPrefix: Scripts
+      guid: 62ff592e49e2fcc4e974175464f8a2e2
   - Id: Characters/0ce04524-231d-41d5-af6f-53bb78350c21
     Resources:
     - name: 1

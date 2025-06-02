@@ -150,13 +150,15 @@ GameObject:
   - component: {fileID: 8375050361548215035}
   - component: {fileID: 6545738707638910420}
   - component: {fileID: 674988627452151638}
+  - component: {fileID: 223363514308521321}
+  - component: {fileID: 1460719909898846703}
   m_Layer: 5
   m_Name: Corp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &9059692028155378247
 RectTransform:
   m_ObjectHideFlags: 0
@@ -164,7 +166,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 309937247410878811}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.0265, y: 1.0265, z: 1.0265}
   m_ConstrainProportionsScale: 0
@@ -174,8 +176,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -456.57617, y: 131.89981}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -456.5762, y: 131.89989}
+  m_SizeDelta: {x: 368, y: 740}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6120493347868097313
 CanvasRenderer:
@@ -259,13 +261,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 1460719909898846703}
+        m_TargetAssemblyTypeName: Naninovel.PlayScript, Elringus.Naninovel.Runtime
+        m_MethodName: Play
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -330,6 +332,35 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+--- !u!114 &223363514308521321
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 309937247410878811}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3bcd1a394b7ff14dbe0cb3efe2ab157, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Id: Corp
+--- !u!114 &1460719909898846703
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 309937247410878811}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5975c9748a52c8d43b34c8d7c428cacd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scriptName: CorpMapMark
+  scriptText: 
+  playOnAwake: 0
+  disableWaitInput: 0
 --- !u!1 &762782540772862892
 GameObject:
   m_ObjectHideFlags: 0
@@ -343,13 +374,15 @@ GameObject:
   - component: {fileID: 1720874508994746311}
   - component: {fileID: 2195187340006273653}
   - component: {fileID: 5633677330854139053}
+  - component: {fileID: 7150336338099267384}
+  - component: {fileID: 8254217103131259870}
   m_Layer: 5
   m_Name: Warehouse
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &4867382156541677082
 RectTransform:
   m_ObjectHideFlags: 0
@@ -451,7 +484,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1720874508994746311}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8254217103131259870}
+        m_TargetAssemblyTypeName: Naninovel.PlayScript, Elringus.Naninovel.Runtime
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &5633677330854139053
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -497,6 +542,35 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+--- !u!114 &7150336338099267384
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 762782540772862892}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3bcd1a394b7ff14dbe0cb3efe2ab157, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Id: Warehouse
+--- !u!114 &8254217103131259870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 762782540772862892}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5975c9748a52c8d43b34c8d7c428cacd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scriptName: WarehouseMapMark
+  scriptText: 
+  playOnAwake: 0
+  disableWaitInput: 0
 --- !u!1 &1269716334996892760
 GameObject:
   m_ObjectHideFlags: 0
@@ -1198,13 +1272,15 @@ GameObject:
   - component: {fileID: 3859671688719464692}
   - component: {fileID: 1158455257077826987}
   - component: {fileID: 5648015707049992433}
+  - component: {fileID: 8969716363301522612}
+  - component: {fileID: 7287408917555730280}
   m_Layer: 5
   m_Name: Lab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &123410108579402744
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1223,7 +1299,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 122.881004, y: 328.0584}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 143, y: 321}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8539834908276180962
 CanvasRenderer:
@@ -1306,7 +1382,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 6217979550090732758}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7287408917555730280}
+        m_TargetAssemblyTypeName: Naninovel.PlayScript, Elringus.Naninovel.Runtime
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1158455257077826987
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1366,6 +1454,35 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+--- !u!114 &8969716363301522612
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7273932090145273518}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3bcd1a394b7ff14dbe0cb3efe2ab157, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Id: Lab
+--- !u!114 &7287408917555730280
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7273932090145273518}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5975c9748a52c8d43b34c8d7c428cacd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scriptName: LabMapMark
+  scriptText: 
+  playOnAwake: 0
+  disableWaitInput: 0
 --- !u!1 &7761712043100986397
 GameObject:
   m_ObjectHideFlags: 0
