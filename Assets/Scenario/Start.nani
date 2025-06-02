@@ -3,6 +3,7 @@
 @wait i
 ; @bg city_night transition=fade
 ; @music city_atmo fadeIn=2
+
 @char Spectra.Base pos:40,0 scale:0.8
 @wait i
 Spectra.Base: Ты пришёл. {G_playerName}, верно?
@@ -13,8 +14,12 @@ Spectra.CloseM: Наш контакт в лаборатории контроля
 @set questLog="Встретиться с Ченингом в лаборатории"
 @showUI QuestLogUI
 Spectra.Base: Он может попытаться заручиться твоей поддержкой, но знай. Ему нельзя доверять. Главное - установи местонахождение хард-драйва и доставь его мне. 
-Spectra.Angry1: Не забудь потренироваться во взломе! Можешь воспользоваться моим терминалом.
+
 @hide Spectra
+
+@print "(Пора отправляться...)" author:{G_playerName}
+@showUI MapButtonUI
+@stop
 
 @playMiniGame
 @if G_gameWon
@@ -23,6 +28,3 @@ Spectra.Angry1: Не забудь потренироваться во взлом
 @set result="(Не вышло..."
 @endIf
 @set result+="Пора отправляться...)"
-@print {result} author:{G_playerName}
-@showUI MapButtonUI
-@stop
