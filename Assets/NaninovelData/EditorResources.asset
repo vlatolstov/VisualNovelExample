@@ -179,6 +179,9 @@ MonoBehaviour:
     - name: Close_Map
       pathPrefix: Scripts
       guid: 01c11ff0c08002448a515c620e21c67e
+    - name: MiniGameTest
+      pathPrefix: Scripts
+      guid: c1ebf11ed624eb04290591f16eae02fc
   - Id: Characters/0ce04524-231d-41d5-af6f-53bb78350c21
     Resources:
     - name: 1

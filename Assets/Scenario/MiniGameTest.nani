@@ -1,0 +1,5 @@
+@playMiniGame
+
+@showPrinter Dialogue
+@print {G_gameWon}
+@stop
