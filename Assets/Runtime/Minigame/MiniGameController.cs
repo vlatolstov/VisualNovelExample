@@ -15,10 +15,23 @@ public class MiniGameController : MonoBehaviour {
     [SerializeField] private Sprite _backSprite;
     [SerializeField] private float _flipBackDelay = 1.2f;
     [SerializeField] private float _appearanceDelay = 0.3f;
-    
+
     [Header("Timer Settings")]
     [SerializeField] private float _timeLimit = 30f;
     [SerializeField] private Slider _timerBar;
+
+    [Header("UI Panels")]
+    [SerializeField] private GameObject _startPanel;
+    [SerializeField] private GameObject _gamePanel;
+    [SerializeField] private GameObject _endPanel;
+    [SerializeField] private Button _startButton;
+    [SerializeField] private Button _endButton;
+    [SerializeField] private Image _result;
+    [SerializeField] private Sprite _goodResult;
+    [SerializeField] private Sprite _badResult;
+
+    private enum GameState { Start, Playing, End }
+    private GameState _state;
 
     private readonly List<CardView> _allCards = new();
     private CardView _firstSelected;
@@ -31,10 +44,26 @@ public class MiniGameController : MonoBehaviour {
     private bool _isGameRunning;
     private bool _isComparing;
 
-    public async void StartGame(Action<bool> onComplete) {
+    public void StartGame(Action<bool> onComplete) {
         _onGameComplete = onComplete;
+        SetState(GameState.Start);
+
+        _startButton.onClick.RemoveAllListeners();
+        _startButton.onClick.AddListener(() => {
+            StartGameplayAsync().Forget();
+        });
+
+        _endButton.onClick.RemoveAllListeners();
+        _endButton.onClick.AddListener(() => {
+            _onGameComplete?.Invoke(_currentMatches >= _totalMatchesNeeded);
+        });
+    }
+
+    private async UniTaskVoid StartGameplayAsync() {
         ResetGame();
-        await GenerateCards();
+        SetState(GameState.Playing);
+
+        await GenerateCardsAsync();
         StartTimer();
     }
 
@@ -50,7 +79,7 @@ public class MiniGameController : MonoBehaviour {
         _isComparing = false;
     }
 
-    private async UniTask GenerateCards() {
+    private async UniTask GenerateCardsAsync() {
         var pairCount = _frontSprites.Length;
         _totalMatchesNeeded = pairCount;
 
@@ -142,6 +171,17 @@ public class MiniGameController : MonoBehaviour {
 
     private void EndGame(bool won) {
         _isGameRunning = false;
-        _onGameComplete?.Invoke(won);
+        SetState(GameState.End);
+
+        if (_result != null)
+            _result.sprite = won ? _goodResult : _badResult;
+    }
+
+    private void SetState(GameState state) {
+        _state = state;
+
+        _startPanel.SetActive(state == GameState.Start);
+        _gamePanel.SetActive(state == GameState.Playing);
+        _endPanel.SetActive(state == GameState.End);
     }
 }
