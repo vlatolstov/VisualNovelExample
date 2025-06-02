@@ -29,5 +29,5 @@ MonoBehaviour:
   ServerPort: 41016
   AutoGenerateMetadata: 1
   GenerateLabelMetadata: 1
-  EnableDevelopmentConsole: 0
+  EnableDevelopmentConsole: 1
   DebugOnlyConsole: 0
