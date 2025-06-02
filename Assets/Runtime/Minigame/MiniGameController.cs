@@ -14,8 +14,8 @@ public class MiniGameController : MonoBehaviour {
     [SerializeField] private Sprite[] _frontSprites;
     [SerializeField] private Sprite _backSprite;
     [SerializeField] private float _flipBackDelay = 1.2f;
+    [SerializeField] private float _appearanceDelay = 0.3f;
     
-
     [Header("Timer Settings")]
     [SerializeField] private float _timeLimit = 30f;
     [SerializeField] private Slider _timerBar;
@@ -31,10 +31,10 @@ public class MiniGameController : MonoBehaviour {
     private bool _isGameRunning;
     private bool _isComparing;
 
-    public void StartGame(Action<bool> onComplete) {
+    public async void StartGame(Action<bool> onComplete) {
         _onGameComplete = onComplete;
         ResetGame();
-        GenerateCards();
+        await GenerateCards();
         StartTimer();
     }
 
@@ -50,7 +50,7 @@ public class MiniGameController : MonoBehaviour {
         _isComparing = false;
     }
 
-    private void GenerateCards() {
+    private async UniTask GenerateCards() {
         var pairCount = _frontSprites.Length;
         _totalMatchesNeeded = pairCount;
 
@@ -72,6 +72,8 @@ public class MiniGameController : MonoBehaviour {
             card.ResetCard();
             card.PlayAppearAnimation();
             _allCards.Add(card);
+
+            await UniTask.Delay(TimeSpan.FromSeconds(_appearanceDelay));
         }
     }
 

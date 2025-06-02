@@ -86,7 +86,6 @@ GameObject:
   - component: {fileID: 6106228564694439631}
   - component: {fileID: 1050471646245426403}
   - component: {fileID: 4562722865407320361}
-  - component: {fileID: 7574655250348519124}
   m_Layer: 5
   m_Name: MiniGameUI
   m_TagString: Untagged
@@ -208,30 +207,9 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 1a93e4f4f141f474bad4ff76ac327dd6, type: 3}
   _backSprite: {fileID: 21300000, guid: c22f7c3cb2ce59f468ec2a98d8b39f30, type: 3}
   _flipBackDelay: 0.6
-  _timeLimit: 5
+  _appearanceDelay: 0.15
+  _timeLimit: 45
   _timerBar: {fileID: 6547841143648880478}
---- !u!95 &7574655250348519124
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1261145747894032947}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 451842956914c6545b6807dfa45f9380, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &3523040658296266989
 GameObject:
   m_ObjectHideFlags: 0
@@ -380,7 +358,7 @@ RectTransform:
   m_GameObject: {fileID: 4085794448746911999}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.01, y: 1.3, z: 1.01}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4026607176315213862}
@@ -418,8 +396,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 523a56ae354f7e14b9438b9966f12d0b, type: 3}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: c77c81e0e02f44f48940c1aec7414b45, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -807,8 +785,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.25}
   m_AnchorMax: {x: 1, y: 0.75}
-  m_AnchoredPosition: {x: -5, y: 0}
-  m_SizeDelta: {x: -20, y: 0}
+  m_AnchoredPosition: {x: 0.27508545, y: 0}
+  m_SizeDelta: {x: -9.4498, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &4848712876543517461
 GameObject:
@@ -875,7 +853,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 0a636d73e3bc5804890a03d9acc4a405, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 82b4f250b53c5eb49b57ccb970f24e1f, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -884,7 +862,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 3
+  m_PixelsPerUnitMultiplier: 1
 --- !u!1 &5300274519859255384
 GameObject:
   m_ObjectHideFlags: 0
