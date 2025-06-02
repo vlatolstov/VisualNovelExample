@@ -13,8 +13,16 @@ Spectra.CloseM: Наш контакт в лаборатории контроля
 @set questLog="Встретиться с Ченингом в лаборатории"
 @showUI QuestLogUI
 Spectra.Base: Он может попытаться заручиться твоей поддержкой, но знай. Ему нельзя доверять. Главное - установи местонахождение хард-драйва и доставь его мне. 
+Spectra.Angry1: Не забудь потренироваться во взломе! Можешь воспользоваться моим терминалом.
 @hide Spectra
 
-@print "(Пора отправляться...)" author:{G_playerName}
+@playMiniGame
+@if G_gameWon
+@set result="(Получилось! "
+@else
+@set result="(Не вышло..."
+@endIf
+@set result+="Пора отправляться...)"
+@print {result} author:{G_playerName}
 @showUI MapButtonUI
 @stop
