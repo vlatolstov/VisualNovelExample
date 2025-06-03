@@ -65,21 +65,21 @@ MonoBehaviour:
   - scriptName: LabMapMark
     position:
       serializedVersion: 2
-      x: 121
-      y: -223
+      x: 0
+      y: 0
       width: 143
       height: 125
   - scriptName: CorpMapMark
     position:
       serializedVersion: 2
-      x: 176
-      y: 141
+      x: 0
+      y: 0
       width: 127
       height: 77
   - scriptName: WarehouseMapMark
     position:
       serializedVersion: 2
-      x: 233
-      y: -32
+      x: 0
+      y: 0
       width: 163
       height: 77

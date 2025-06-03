@@ -1,2 +1,9 @@
-Warehouse
+@back Warehouse
+; @bgm
+@showUI HardDriveUI,QuestLogUI
+Player: (Хард-драйв должен быть где то тут...)
+@hidePrinter
+@showUI MapButtonUI
+@mapButtonEnable id:Warehouse enabled:false
+@mapButtonEnable id:Lab enabled:false
 @stop

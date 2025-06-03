@@ -1,32 +1,89 @@
+; Intro
+@back Base
+; @bgm
 @input G_playerName summary:"Как тебя зовут, хакер?"
 @wait i
+@goto .Start
 
-; @bgm
-
+#Start
 @back Corp
 @char Spectra.Base pos:40,0 scale:0.8
-@wait i
-Spectra.Base: Ты пришёл. {G_playerName}, верно?
-Spectra.CloseM: У нас мало времени. В Сети засекли движение Протокола Омега. Понимаешь, что это значит? Это наш шанс закончить эту бойню.
-Spectra.OpenM: Купер сказал, что вы исключительный агент. Хотя и со своим стилем.
-Spectra.Hair: Полагаю это твой шанс реабилитироваться, {G_playerName}, после провала прошлого задания. 
-Spectra.CloseM: Наш контакт в лаборатории контроля вооружений - доктор Ченинг. Мы давно за ним наблюдаем. Найди его. Получи от него информацию.
+@wait 1
+Spectra.Base: А, это ты... {G_playerName}, верно?
+Spectra.CloseM: У нас мало времени. В Сети засекли движение Протокола Омега. Понимаешь, что это значит? Это наш шанс закончить этот мятеж.
+Spectra.OpenM: Купер сказал, что ты исключительный агент. Хотя и со своим стилем. Если бы не провал прошлого задания...
+Spectra.Hair: Полагаю это твой шанс реабилитироваться, {G_playerName}. 
+Spectra.CloseM: Наш контакт в лаборатории мониторинга сети - доктор Ченинг. Мы давно за ним наблюдаем. Ступай к нему. Получи от него информацию.
 @set questLog="Встретиться с Ченингом в лаборатории"
 @showUI QuestLogUI
-@mapButtonEnable id:Lab enabled:true
-Spectra.Base: Он может попытаться заручиться твоей поддержкой, но знай. Ему нельзя доверять. Главное - установи местонахождение хард-драйва и доставь его мне. 
+Spectra.Base: Он может попытаться заручиться твоей поддержкой, но знай - eму нельзя доверять. Главное - установи местонахождение хард-драйва и доставь его мне. 
 
 @hide Spectra
 
-#Map
-@print "(Пора отправляться...)" author:{G_playerName}
+Player: (Пора отправляться...)
+
+@hidePrinter
+@mapButtonEnable id:Lab enabled:true
 @showUI MapButtonUI
 @stop
 
-@playMiniGame
-@if G_gameWon
-@set result="(Получилось! "
-@else
-@set result="(Не вышло..."
-@endIf
-@set result+="Пора отправляться...)"
+#Final
+@back CorpFinal
+; bgm
+@mapButtonEnable id:Corp enabled:false
+
+@char Spectra.CloseM pos:20,0 scale:0.8
+@wait 1
+Spectra.Hair: А, вот и ты! Надеюсь не с пустыми руками?
+Player: Ченинга похитили! Всю лабораторию разгромили... Я думаю, это были повстанцы.
+Spectra.OpenM: Ченинг и был повстанцем! Но можешь не беспокоиться из-за этого червя. 
+Spectra.Base: Привести его.
+
+@char Chening.Captured pos:80,0 scale:0.6 
+@wait 1
+Chening: Послушай меня, {G_playerName}... Если хард-драйв попадет в руки корпорации, всем будет очень плохо...
+Chening: ТЫ ДОЛЖЕН УНИЧТОЖИТЬ ЕГО!!!
+
+Spectra.Angry1: МОЛЧАТЬ!
+Spectra.Angry2: Диск! Живо!
+@choice "Отдать диск Спектре" goto:.Final.Spectra
+@choice "Уничтожить диск по просьбе Ченинга" goto:.Final.Chening
+@choice "Сбежать, оставив диск себе" goto:.Final.Player
+@stop
+
+#Final.Spectra
+Spectra.CloseM: Верное решение... Уведите его!
+Chening: Ты всех нас... погубил...
+@blur Chening
+@hide Chening time:1.5
+@char Spectra.Base pos:50,0 time:2
+Spectra: Ты можешь идти. Оплату переведут в полном объеме.
+Spectra: И ещё... небольшой совет. Уезжай из этого города. Для таких как ты тут теперь не место.
+@hidePrinter
+@hide Spectra
+@goto .End
+
+#Final.Chening
+Ты выхватываешь диск из куртки и швыряешь его об пол. Восстановлению не подлежит...
+Spectra.Angry2: НЕЕЕЕЕЕЕЕТ! [char Spectra pos:30,0 scale:0.9]
+Ченинг украдкой кидает благодарный взгляд.
+Spectra.CloseM: Как глупо. Впрочем это ничего не изменит.
+Spectra.Base: Избавься от них.
+@hide Spectra
+КИБОРГ: Выполняю...
+@hidePrinter
+@hide Chening time:1.5
+@goto .End
+
+#Final.Player
+Ты выхватываешь пистолет и со стрельбой убегаешь прочь.
+Spectra.Angry1: ОСТАНОВИТЬ ЕГО!
+Chening: ПОГИБНУТ ПРОСТЫЕ ЛЮДИ!
+@hidePrinter
+@hide Spectra,Chening time:3
+@goto .End
+
+#End
+@back Title time:5
+@title
+@stop

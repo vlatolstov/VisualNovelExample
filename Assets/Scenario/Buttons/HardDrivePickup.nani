@@ -1,0 +1,8 @@
+@set questLog="Вернуться в лабораторию к Ченингу"
+@set hardDriveFound=true
+@hideUI HardDriveUI,MapButtonUI
+Player: (Вот и он. Было не так уж и сложно.)
+@hidePrinter
+@mapButtonEnable id:Lab enabled:true
+@showUI MapButtonUI
+@stop

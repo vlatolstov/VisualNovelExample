@@ -23,7 +23,7 @@ MonoBehaviour:
     Culture=neutral, PublicKeyToken=null
   StableIdentification: 0
   InitializationScript: 
-  TitleScript: 
+  TitleScript: Title
   StartGameScript: Corp
   AutoAddScripts: 1
   HotReloadScripts: 1

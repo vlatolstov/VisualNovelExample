@@ -1,6 +1,58 @@
 #Chening
-Тут стоит ченинг
+@mapButtonEnable id:Lab enabled:false
+@back Lab
+; @bgm
+@wait 1
+@char Chening.Base pos:70,0 scale:0.8
+@wait 1
+
+Chening: Твое начальство уже связалось со мной, я совсем тебя заждался.
+Player: (Эй! Меня всего лишь наняли, она мне не начальство!!!)
+Chening.Smile: Выглядишь раздраженным, ха-ха.
+Chening.Base: Ладно, перейдем к делу. Я обнаружил местонахождение Протокола Омега. Если эти данные попадут не в те руки... Ты должен понять насколько это...
+
+@set questLog="Отразить кибер-атаку"
+@showUI QuestLogUI
+
+Chening.Serious: Что-то не так! На мой сервер идет атака?! Я не могу потерять координаты! Cадись за компьютер и помогай!
+
+@hideUI QuestLogUI
+@hidePrinter
+@hideChars
+
+@playMiniGame
+@if G_gameWon
+Chening.Smile: Да ты не промах! Ловко ты их обезвредил, мне даже ничего делать не пришлось.
+@else
+Chening.Serious: Да уж, помощи от тебя было не много... Хорошо, что я успел закрыть внутренний контур.
+@endIf
+
+Chening.Base: Согласно полученным координатам, хард-драйв находится где-то в области заброшенного городского порта.
+Chening.Base: Забирай диск и возвращайся сюда.
+@set questLog="Забрать хард-драйв"
+@showUI QuestLogUI
+
+Player: Но Спектра приказала доставить диск сразу ей.
+Chening.Smile: Не волнуйся, я отправлю ей сообщение. К твоему возвращению она уже будет тут.
+
+@hide Chening
+@hidePrinter
+@mapButtonEnable id:Warehouse enabled:true
+@mapButtonEnable id:Lab enabled:false
+@showUI MapButtonUI
 @stop
+
 #Empty
-Тут пусто
+@back LabCrash
+@mapButtonEnable id:Lab enabled:false
+@mapButtonEnable id:Corp enabled:false
+; @bgm
+Player: (Что тут проиошло?! Ченинг пропал?!)
+Player: (Похоже налетчики искали этот самый диск...)
+Player: (Нужно быстрее возвращаться к Спектре!)
+@set questLog="Вернуться на базу корпорации"
+@showUI QuestLogUI
+@hidePrinter
+@mapButtonEnable id:Corp enabled:true
+@showUI MapButtonUI
 @stop

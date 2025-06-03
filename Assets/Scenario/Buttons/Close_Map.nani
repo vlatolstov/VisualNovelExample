@@ -1,4 +1,3 @@
 @hideUI MapUI
 @showUI MapButtonUI,QuestLogUI
-@showPrinter
 @stop

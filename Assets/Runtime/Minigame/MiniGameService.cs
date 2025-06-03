@@ -5,6 +5,7 @@ using System.Threading;
 [InitializeAtRuntime]
 public class MiniGameService : IMiniGameService {
     private MiniGameController _miniGameUI;
+    private CanvasFader _fader;
     private UniTaskCompletionSource<bool> _gameCompletionSource;
 
     public bool WasLastGameSuccessful { get; private set; }
@@ -16,6 +17,7 @@ public class MiniGameService : IMiniGameService {
         instance.SetActive(false);
 
         _miniGameUI = instance.GetComponent<MiniGameController>();
+        _fader = instance.GetComponent<CanvasFader>();
         return UniTask.CompletedTask;
     }
 
@@ -29,7 +31,7 @@ public class MiniGameService : IMiniGameService {
     public async UniTask PlayAsync(CancellationToken cancellationToken = default) {
         _gameCompletionSource = new UniTaskCompletionSource<bool>();
 
-        _miniGameUI.gameObject.SetActive(true);
+        await _fader.FadeInAsync();
         _miniGameUI.StartGame(OnGameCompleted);
 
         using (cancellationToken.Register(() => _gameCompletionSource.TrySetCanceled())) {
@@ -37,7 +39,8 @@ public class MiniGameService : IMiniGameService {
                 WasLastGameSuccessful = await _gameCompletionSource.Task;
             }
             finally {
-                _miniGameUI.gameObject.SetActive(false);
+                await UniTask.Delay(500);
+                await _fader.FadeOutAsync();
             }
         }
 

@@ -60,6 +60,7 @@ public class MiniGameController : MonoBehaviour {
     }
 
     private async UniTaskVoid StartGameplayAsync() {
+        UpdateTimerUI(1f);
         ResetGame();
         SetState(GameState.Playing);
 
@@ -151,20 +152,18 @@ public class MiniGameController : MonoBehaviour {
 
     private async UniTaskVoid TickTimer() {
         while (_timeRemaining > 0f && _isGameRunning) {
-            UpdateTimerUI();
+            UpdateTimerUI(Mathf.Clamp01(_timeRemaining / _timeLimit));
             await UniTask.Delay(100);
             _timeRemaining -= 0.1f;
         }
 
         if (_isGameRunning) {
-            UpdateTimerUI();
+            UpdateTimerUI(Mathf.Clamp01(_timeRemaining / _timeLimit));
             EndGame(false);
         }
     }
 
-    private void UpdateTimerUI() {
-        float progress = Mathf.Clamp01(_timeRemaining / _timeLimit);
-
+    private void UpdateTimerUI(float progress) {
         if (_timerBar != null)
             _timerBar.value = progress;
     }

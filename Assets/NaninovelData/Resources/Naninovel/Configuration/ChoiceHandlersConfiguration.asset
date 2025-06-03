@@ -55,7 +55,7 @@ MonoBehaviour:
       guid: eedac858-697f-4d63-a873-b601a28ea04c
       customData:
         rid: -2
-      WaitHideOnChoice: 0
+      WaitHideOnChoice: 1
     - Implementation: Naninovel.UIChoiceHandler, Elringus.Naninovel.Runtime, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       Loader:

@@ -42,7 +42,7 @@ MonoBehaviour:
     Resources:
     - name: ButtonList
       pathPrefix: ChoiceHandlers
-      guid: 1f6aa29000e839c409e6a9c0704adc96
+      guid: 1e061555377272b4bb0b6e04593f1b14
   - Id: ChoiceHandlers/3fa24dc8-d05a-4730-ae9a-8e68e0d98ecc
     Resources:
     - name: ButtonArea
@@ -153,6 +153,9 @@ MonoBehaviour:
     - name: QuestLogUI
       pathPrefix: UI
       guid: 0b435f175ec564b44b516d764dc92c7b
+    - name: HardDriveUI
+      pathPrefix: UI
+      guid: 133457835f30e514b900d7e5d0f652c3
   - Id: Scripts
     Resources:
     - name: Corp
@@ -185,6 +188,9 @@ MonoBehaviour:
     - name: WarehouseMapMark
       pathPrefix: Scripts
       guid: 62ff592e49e2fcc4e974175464f8a2e2
+    - name: HardDrivePickup
+      pathPrefix: Scripts
+      guid: 1a2fd1176472c2b4fac3de64305c8f6b
   - Id: Characters/0ce04524-231d-41d5-af6f-53bb78350c21
     Resources:
     - name: 1
@@ -209,9 +215,27 @@ MonoBehaviour:
     Resources: []
   - Id: Backgrounds/de02d14b-f9d7-45fe-b9d7-91afa232d8d9
     Resources:
+    - name: Base
+      pathPrefix: Backgrounds/MainBackground
+      guid: 766a594eedaec8846a30a18e532ce193
+    - name: Title
+      pathPrefix: Backgrounds/MainBackground
+      guid: b722fb7589b96f9448dddd64b1a2373e
     - name: Corp
       pathPrefix: Backgrounds/MainBackground
-      guid: 4649c7b3eca40c346a91d206a93d6e3a
+      guid: b980c4c9210accd4dbde51287493fec7
+    - name: Lab
+      pathPrefix: Backgrounds/MainBackground
+      guid: 4dd822b63f5d754438a38d00a078484c
+    - name: LabCrash
+      pathPrefix: Backgrounds/MainBackground
+      guid: 06c8b45aff91605478d9a889053dee5c
+    - name: Warehouse
+      pathPrefix: Backgrounds/MainBackground
+      guid: ac48f606f9c02814bb47ff5b67d1f80d
+    - name: CorpFinal
+      pathPrefix: Backgrounds/MainBackground
+      guid: 3cf0974bfd5b9054086c82944604cc74
   - Id: Characters/6f6fa583-4a0b-442b-b1ad-e08fc3aba22b
     Resources:
     - name: Base
@@ -233,4 +257,18 @@ MonoBehaviour:
       pathPrefix: Characters/Spectra
       guid: 5de62769156b122418776d1b7bfe8c08
   - Id: Characters/27d93b83-b40f-486e-9955-a25fb69f8cb2
+    Resources:
+    - name: Base
+      pathPrefix: Characters/Chening
+      guid: 3c7a9a7276312a44fad5170d5e6a37c6
+    - name: Serious
+      pathPrefix: Characters/Chening
+      guid: 28630ecad6fdb624db4d9133476d162f
+    - name: Smile
+      pathPrefix: Characters/Chening
+      guid: 868999c7a2ea54a408cbba4be2c53a9a
+    - name: Captured
+      pathPrefix: Characters/Chening
+      guid: b65201999528d9544ae20ceafea39405
+  - Id: Characters/29c3038c-9aa9-4c4c-8cda-272e8c324737
     Resources: []

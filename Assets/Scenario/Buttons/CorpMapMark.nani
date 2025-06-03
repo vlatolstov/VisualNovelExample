@@ -1,2 +1,3 @@
-
+@hideUI MapUI
+@goto Corp.Final
 @stop
