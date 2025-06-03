@@ -272,3 +272,20 @@ MonoBehaviour:
       guid: b65201999528d9544ae20ceafea39405
   - Id: Characters/29c3038c-9aa9-4c4c-8cda-272e8c324737
     Resources: []
+  - Id: Audio
+    Resources:
+    - name: Corp1
+      pathPrefix: Audio
+      guid: c994699c822063c4f94321e8489e4ce7
+    - name: Corp2
+      pathPrefix: Audio
+      guid: 864f72d6549e78e488d975c9c802b875
+    - name: Lab1
+      pathPrefix: Audio
+      guid: 20b27f1268011bc4fb2f5fb9abf122e3
+    - name: Title
+      pathPrefix: Audio
+      guid: f506e8b12fc5b8a4ea4591180c9b8bd0
+    - name: Ware
+      pathPrefix: Audio
+      guid: c2c1fe8aeba922349ab2c745ca272b99

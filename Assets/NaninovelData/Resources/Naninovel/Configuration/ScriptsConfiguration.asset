@@ -30,7 +30,7 @@ MonoBehaviour:
   WatchScripts: 1
   WatchedDirectory: 
   CountTotalCommands: 0
-  ShowScriptNavigator: 1
+  ShowScriptNavigator: 0
   EnableVisualEditor: 1
   HideUnusedParameters: 1
   SelectPlayedScript: 1

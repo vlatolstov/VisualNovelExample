@@ -11,7 +11,7 @@ public class MiniGameService : IMiniGameService {
     public bool WasLastGameSuccessful { get; private set; }
 
     public UniTask InitializeServiceAsync() {
-        var prefab = Resources.Load<GameObject>("Naninovel/MiniGame/MiniGameUI");
+        var prefab = Resources.Load<GameObject>("MiniGame/MiniGameUI");
         var instance = Object.Instantiate(prefab);
         Object.DontDestroyOnLoad(instance);
         instance.SetActive(false);

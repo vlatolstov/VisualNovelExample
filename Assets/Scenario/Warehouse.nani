@@ -1,5 +1,6 @@
 @back Warehouse
-; @bgm
+@stopBgm
+@bgm Ware
 @showUI HardDriveUI,QuestLogUI
 Player: (Хард-драйв должен быть где то тут...)
 @hidePrinter

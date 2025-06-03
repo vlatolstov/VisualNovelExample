@@ -1,6 +1,7 @@
 ; Intro
 @back Base
-; @bgm
+@stopBgm
+@bgm Corp1
 @input G_playerName summary:"Как тебя зовут, хакер?"
 @wait i
 @goto .Start
@@ -29,7 +30,8 @@ Player: (Пора отправляться...)
 
 #Final
 @back CorpFinal
-; bgm
+@stopBgm
+@bgm Corp2
 @mapButtonEnable id:Corp enabled:false
 
 @char Spectra.CloseM pos:20,0 scale:0.8

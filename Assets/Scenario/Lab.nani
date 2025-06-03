@@ -1,7 +1,8 @@
 #Chening
 @mapButtonEnable id:Lab enabled:false
 @back Lab
-; @bgm
+@stopBgm
+@bgm Lab1
 @wait 1
 @char Chening.Base pos:70,0 scale:0.8
 @wait 1
@@ -46,7 +47,7 @@ Chening.Smile: Не волнуйся, я отправлю ей сообщени�
 @back LabCrash
 @mapButtonEnable id:Lab enabled:false
 @mapButtonEnable id:Corp enabled:false
-; @bgm
+
 Player: (Что тут проиошло?! Ченинг пропал?!)
 Player: (Похоже налетчики искали этот самый диск...)
 Player: (Нужно быстрее возвращаться к Спектре!)
